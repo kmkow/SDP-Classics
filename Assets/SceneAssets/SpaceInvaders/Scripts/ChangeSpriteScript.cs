@@ -11,7 +11,7 @@ public class ChangeSpriteScript : MonoBehaviour
    
     public SpriteRenderer sr;
 
-    bool sc=true;
+   
     // Start is called before the first frame update
     void Start()
     {

@@ -8,12 +8,25 @@ public class BaseContainerScript : MonoBehaviour
     [SerializeField]
     private TMP_Text gameOver;
 
+    [SerializeField]
+    GameObject EnemyContainer;
+
+
+
     // Update is called once per frame
     void Update()
     {
-        if (transform.childCount == 0)
+        if (transform.childCount < 1 || GameObject.Find("Player") == null)
         {
+            //lose
             gameOver.gameObject.SetActive(true);
         }
+
+        if (EnemyContainer.transform.childCount <1 && GameObject.Find("Player") != null)
+        {
+            //win
+
+        }
+
     }
 }

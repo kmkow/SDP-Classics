@@ -15,7 +15,8 @@ public class Enemy1Spawner : MonoBehaviour
     [SerializeField]
     int rows = 5;
     List<GameObject> cols1 = new List<GameObject>();
-   
+    List<GameObject> cols2 = new List<GameObject>();
+    List<GameObject> cols3 = new List<GameObject>();
     public float move = 0.5f;
     float leftmove = -0.5f;
     float rightmove = 0.5f;
@@ -51,6 +52,18 @@ public class Enemy1Spawner : MonoBehaviour
                     xoldposcol = enemi.transform.position.x;
                     enemi.transform.parent = gameObject.transform;
                 }
+                if (i == 2)
+                {
+                    var enemi = Instantiate(cols2[j], new Vector3(xoldposcol + 1f, yoldposrow, transform.position.z), Quaternion.identity);
+                    xoldposcol = enemi.transform.position.x;
+                    enemi.transform.parent = gameObject.transform;
+                }
+                if (i == 3)
+                {
+                    var enemi = Instantiate(cols3[j], new Vector3(xoldposcol + 1f, yoldposrow, transform.position.z), Quaternion.identity);
+                    xoldposcol = enemi.transform.position.x;
+                    enemi.transform.parent = gameObject.transform;
+                }
 
 
 
@@ -71,6 +84,8 @@ public class Enemy1Spawner : MonoBehaviour
         for (int i = 0; i < 11; i++)
         {
             cols1.Add(enemies[0]);
+            cols2.Add(enemies[1]);
+            cols3.Add(enemies[2]);
         }
         
     }

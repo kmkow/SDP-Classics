@@ -8,9 +8,12 @@ public class PlayerSpInvScript : MonoBehaviour
     float sboundary = 8;
     [SerializeField]
     private GameObject _shot;
+    [SerializeField]
+    float nextShot = 0f;
     void Start()
     {
         this.transform.position = new Vector3(0f, -3.7f, 0f);
+        nextShot = Time.time + 0f;
     }
 
     // Update is called once per frame
@@ -36,14 +39,19 @@ public class PlayerSpInvScript : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            Instantiate(
-           _shot,
-           new Vector3(
-           transform.position.x,
-           transform.position.y+0.7f,
-           -0.01f),
-           Quaternion.identity
-           );
+            if (Time.time > nextShot)
+            {
+                nextShot = Time.time + 0.4f;
+                Instantiate(
+         _shot,
+         new Vector3(
+         transform.position.x,
+         transform.position.y + 0.7f,
+         -0.01f),
+         Quaternion.identity
+         );
+            }
+          
         }
 
     }
