@@ -10,10 +10,14 @@ public class EnemA1Script : MonoBehaviour
     [SerializeField]
     private GameObject _enemLaser;
 
+    [SerializeField]
+    public int EnemScore;
+
     GameObject parent;
-    private bool bordered;
+  
 
     float nextFire = 3f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -47,12 +51,16 @@ public class EnemA1Script : MonoBehaviour
            
 
         }
+        if (Input.GetKey(KeyCode.Z))
+        {
+            Destroy(this.gameObject);
+        }
+       
         
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!bordered) 
-        {
+        
             if (other.CompareTag("leftwall"))
             {
                 parent.GetComponent<Enemy1Spawner>().LeftBord();
@@ -61,8 +69,7 @@ public class EnemA1Script : MonoBehaviour
             {
                 parent.GetComponent<Enemy1Spawner>().RightBord();
             }
-            bordered = true;
-        }
+            
         
     }
 

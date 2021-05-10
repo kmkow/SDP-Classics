@@ -30,8 +30,13 @@ public class LaserScript : MonoBehaviour
     {
         if (other)
         {
-            Destroy(this.gameObject);
+           
+            if (other.CompareTag("enemy"))
+                { BaseContainerScript.score += other.GetComponent<EnemA1Script>().EnemScore; }
+
+            
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 

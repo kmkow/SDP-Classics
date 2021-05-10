@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class GMngScript : MonoBehaviour
 {
     // Start is called before the first frame update
-   
+ 
     void Start()
     {
-        
+      
 
         QualitySettings.vSyncCount = 1;
     }
@@ -19,6 +19,7 @@ public class GMngScript : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
         }
+
     }
 
 }

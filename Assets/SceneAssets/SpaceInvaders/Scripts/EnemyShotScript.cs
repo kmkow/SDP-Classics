@@ -23,7 +23,12 @@ public class EnemyShotScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.name=="Player") { Destroy(other.gameObject); }
+        if(other.CompareTag("Player")) 
+        {
+            GameObject.Find("BaseContainer").GetComponent<BaseContainerScript>().PlayerOff();
+            BaseContainerScript.lives--;
+            Destroy(other.gameObject); 
+        }
         if (other.transform.CompareTag("baseUnit")) { Destroy(other.gameObject); }
        
         Destroy(this.gameObject);

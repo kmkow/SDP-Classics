@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6931465672721435466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.76, y: 0.64, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9021250343595845889}
   m_Father: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemLaser: {fileID: 8358425997385964506, guid: 32e392fd99800be44b659d3f7130af6d, type: 3}
+  EnemScore: 30
 --- !u!65 &7989755686877013645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58,8 +59,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.97211254, y: 0.66522616, z: 3.0136075}
-  m_Center: {x: 0.008126563, y: -0.08647351, z: 0}
+  m_Size: {x: 1, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3219632880185282959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -103,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 8988682041654381613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4529264, y: 4.157422, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1629878883414840060}
   m_RootOrder: 0

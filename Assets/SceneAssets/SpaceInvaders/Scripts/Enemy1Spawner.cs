@@ -25,12 +25,20 @@ public class Enemy1Spawner : MonoBehaviour
 
     float xoldposcol;
     float yoldposrow;
-   
 
+ 
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        Random.InitState((int)System.DateTime.Now.Ticks);
+        transform.position = new Vector3(-5.9f, 4f, 0f);
+        var r = Random.Range(1.00f, 2.01f);
+        if (r> 1.5)
+        {
+            move = leftmove;
+        } 
+        else if(r<1.5) move = rightmove;
         Level1();
         StartCoroutine("Movement");
         xoldposcol = transform.position.x;
@@ -76,8 +84,15 @@ public class Enemy1Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+        if (transform.childCount<1)
+        {
+            GameObject.Find("BaseContainer").GetComponent<BaseContainerScript>().SpawnerOff();
+            Destroy(this.gameObject);
+        }
+       
     }
+
 
     void Level1()
     {
@@ -93,37 +108,46 @@ public class Enemy1Spawner : MonoBehaviour
     {
         
         ChMoveLeft();
-        if (faster < 1.9f)
-        {
-            faster += 0.2f;
-        }
-       
-        transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y - 0.5f, transform.position.z);
-        
+     
     }
     public void LeftBord()
     {
         
         ChMoveRight();
-        if (faster <= 1.8f)
-        {
-            faster += 0.2f;
-        }
-
-        
-        transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y - 0.5f, transform.position.z);
-        
+   
     }
 
     void ChMoveLeft()
     {
+        if (move>0)
+        {
+            move = leftmove;
+            if (faster < 1.9f)
+            {
+                faster += 0.2f;
+            }
 
-        move = leftmove;
-        
+            transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y - 0.5f, transform.position.z);
+
+        }
+
+
     }
     void ChMoveRight()
     {
-        move = rightmove;
+
+        if (move<0)
+        {
+            move = rightmove;
+            if (faster <= 1.8f)
+            {
+                faster += 0.2f;
+            }
+
+
+            transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y - 0.5f, transform.position.z);
+
+        }
     }
 
     private IEnumerator Movement()
@@ -136,5 +160,6 @@ public class Enemy1Spawner : MonoBehaviour
         }
 
     }
+   
 
 }
