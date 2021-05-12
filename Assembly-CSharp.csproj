@@ -57,25 +57,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\ChangeSpriteScript.cs" />
+    <Compile Include="Assets\SceneAssets\AsteroidsGame\Scripts\EmptyAsteroidScript.cs" />
+    <Compile Include="Assets\SceneAssets\AsteroidsGame\Scripts\APlayerScript.cs" />
     <Compile Include="Assets\SceneAssets\Pong\Scripts\P2AIScript.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\GMngScript.cs" />
     <Compile Include="Assets\SceneAssets\Main\GameManagerScript.cs" />
     <Compile Include="Assets\SceneAssets\Pong\Scripts\OnBorderScript.cs" />
+    <Compile Include="Assets\SceneAssets\AsteroidsGame\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\BaseContainerScript.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\LaserScript.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\PlayerSpInvScript.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\EnemA1Script.cs" />
     <Compile Include="Assets\SceneAssets\ToAll\SceneLoaderScript.cs" />
+    <Compile Include="Assets\SceneAssets\AsteroidsGame\Scripts\JustRotateScript.cs" />
+    <Compile Include="Assets\SceneAssets\AsteroidsGame\Scripts\AShotScript.cs" />
     <Compile Include="Assets\SceneAssets\Pong\Scripts\BallScript.cs" />
     <Compile Include="Assets\SceneAssets\ToAll\MouseScript.cs" />
     <Compile Include="Assets\SceneAssets\Pong\Scripts\P1Script.cs" />
     <Compile Include="Assets\SceneAssets\Pong\Scripts\ScoringScript.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\EnemyShotScript.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\BaseScript.cs" />
+    <Compile Include="Assets\SceneAssets\AsteroidsGame\Scripts\RandomRotator.cs" />
     <Compile Include="Assets\SceneAssets\SpaceInvaders\Scripts\Enemy1Spawner.cs" />
     <Compile Include="Assets\Scenes\PreGameScreens\GameMgSI.cs" />
     <Compile Include="Assets\SceneAssets\Main\GWOScrtiptableOb.cs" />
     <Compile Include="Assets\SceneAssets\Pong\Scripts\P2Script.cs" />
+    <Compile Include="Assets\SceneAssets\AsteroidsGame\Scripts\AsteroidsContainer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
