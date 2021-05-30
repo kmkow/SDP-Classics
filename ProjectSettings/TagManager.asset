@@ -12,6 +12,8 @@ TagManager:
   - rightwall
   - base
   - baseUnit
+  - border
+  - tail
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - UI1
+  - UI2
   - 
   - 
   - 

@@ -15,12 +15,24 @@ EditorBuildSettings:
     path: Assets/Scenes/PongGame.unity
     guid: 150bf61496fc8d147a79ec8dd61f2e31
   - enabled: 1
-    path: Assets/Scenes/PreGameScreens/PongSettings.unity
-    guid: f3a92ee6b6be7b742be4062f28ecce93
-  - enabled: 1
     path: Assets/Scenes/PreGameScreens/PreGame-SpaceInv.unity
     guid: 385e1c5d23ef12f4fab892c941c866bd
   - enabled: 1
     path: Assets/Scenes/SpaceInvadersGame.unity
     guid: 11c1ac251a2c2e3429eefac87535ce5e
+  - enabled: 1
+    path: Assets/Scenes/PreGameScreens/PreGame-Asteroids.unity
+    guid: b13c585b48bff1c44b724d6ace95201c
+  - enabled: 1
+    path: Assets/Scenes/AsteroidsGame.unity
+    guid: d37052768e6188145973318890216745
+  - enabled: 1
+    path: Assets/Scenes/PreGameScreens/PreGame-Snake.unity
+    guid: 10c3453898bef39468773e4e23ae3cbb
+  - enabled: 1
+    path: Assets/Scenes/Snaek/SnakeGame.unity
+    guid: 0088a64ac6ebc4d4cb48a3dcebc5e0e4
+  - enabled: 1
+    path: Assets/Scenes/PongAIGame.unity
+    guid: 66396d36ff1c2c24381f7b6d3db498e5
   m_configObjects: {}

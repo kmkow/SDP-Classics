@@ -65,6 +65,7 @@ public class BaseContainerScript : MonoBehaviour
     {
 
         GameInitialize();
+        AchievementManager.instance.Unlock("LSpaceInv");
 
 
     }
@@ -94,6 +95,11 @@ public class BaseContainerScript : MonoBehaviour
         scoreText.text = "Score: " + score;
         livesText.text = "Lives: " + lives;
         levelText.text = "Level: " + level;
+
+        if (score >2999)
+        {
+            AchievementManager.instance.Unlock("ScoreSI3000");
+        }
     }
     IEnumerator PlayerDown()
     {

@@ -30,5 +30,9 @@ public class ScoreScript : MonoBehaviour
         {
             GameOverText.gameObject.SetActive(true);
         }
+        if (score>2999)
+        {
+            AchievementManager.instance.Unlock("SAsteroids3000");
+        }
     }
 }

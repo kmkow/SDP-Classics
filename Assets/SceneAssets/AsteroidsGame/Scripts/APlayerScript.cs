@@ -16,7 +16,8 @@ public class APlayerScript : MonoBehaviour
     GameObject shot;
     void Start()
     {
-       
+        AchievementManager.instance.Unlock("LAsteroids");
+        Time.timeScale = 1;
          rb = GetComponent<Rigidbody>();
         transform.position = new Vector3(0, 1, 0);
     }

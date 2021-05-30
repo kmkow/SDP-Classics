@@ -7,7 +7,8 @@ public class P1Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1;
+        AchievementManager.instance.Unlock("LPong");
     }
 
     // Update is called once per frame
